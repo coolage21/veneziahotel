@@ -1,0 +1,247 @@
+/* welcome */
+
+/* 본문바로가기 */
+.skip {
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-main);
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 60px;
+  transform: translateY(-60px);
+  position: absolute;
+  transition: .5s;
+  z-index: 999;
+}
+.skip:focus {
+  transform: translateY(0);
+}
+
+/* Main visual */
+#main-visual {
+  width: 100%;
+  height: 785px;
+  position: relative;
+}
+#main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reservation {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1170px;
+}
+.reservation-header {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-green);
+}
+.reservation-header h3 {
+  color: white;
+}
+.reservation-main {
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reservation-main > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.reservation-main > div:nth-child(1),
+.reservation-main > div:nth-child(2) {
+  width: 200px;
+  border-bottom: 1px solid var(--color-main);
+}
+.reservation-main > div:nth-child(3),
+.reservation-main > div:nth-child(4),
+.reservation-main > div:nth-child(5) {
+  width: 50px;
+}
+.reservation-main button {
+  font-size: 1.25rem;
+  background-color: var(--color-main);
+  color: white;
+  margin-left: 80px;
+}
+.reservation-main > div label {
+  color: var(--color-khaki);
+}
+.reservation-main input {
+  font-size: 1.45rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Promotion */
+#promotion {
+  padding: 100px 0;
+  background-color: var(--color-sub);
+}
+.promotion-header,
+.event-header {
+  text-align: center;
+}
+.promotion-header h2,
+.event-header h2 {
+  font-family: 'STIX Two Text', serif;
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+.promotion-header p,
+.event-header p {
+  margin-bottom: 85px;
+}
+.promotion-items,
+.event-items {
+  display: flex;
+  justify-content: space-between;
+}
+.promotion-item,
+.event-item {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+}
+.promotion-img {
+  width: 370px;
+  height: 280px;
+  position: relative;
+}
+.promotion-img span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-khaki);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 1.3rem;
+  padding-top: 9px;
+  color: white;
+  font-size: 0.9rem;
+}
+.promotion-img img,
+.event-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promotion-desc,
+.event-desc {
+  background-color: white;
+  padding: 25px;
+}
+.event-desc {
+  color: white;
+}
+.event-item:nth-child(1) .event-desc,
+.event-item:nth-child(3) .event-desc {
+  background-color: var(--color-main);
+}
+.event-item:nth-child(2) .event-desc {
+  background-color: var(--color-khaki);
+}
+.promotion-desc h3,
+.event-desc h3 {
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.promotion-desc em {
+  color: #57786e;
+}
+.event-desc em {
+  color: var(--color-light-khaki);
+}
+.promotion-desc hr,
+.event-desc hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--color-main);
+  margin: 20px 0;
+}
+.event-desc hr {
+  background-color: white;
+}
+.promotion-desc p,
+.event-desc p {
+  margin-bottom: 40px;
+}
+
+/*자세히 보기 버튼*/
+.promotion-desc a,
+.event-desc a {
+  font-weight: bold;
+  padding: 5px 0;
+  color: var(--color-khaki);
+}
+.event-desc a {
+  color: white;
+}
+.promotion-desc a img,
+.event-desc a img {
+  width: 30px;
+  transition: .6s;
+}
+.promotion-desc a:hover img,
+.event-desc a:hover img {
+  transform: translateX(20px);
+}
+
+/*전체보기 버튼*/
+.promotion-btn,
+.event-btn {
+  text-align: center;
+}
+.promotion-btn a,
+.event-btn a {
+  font-size: 1.45rem;
+  text-decoration: underline;
+  float: center;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+/* Event */
+#event {
+  padding: 100px 0;
+  background: url(../images/event-back.png) no-repeat center center;
+}
+.event-item {
+  width: 390px;
+}
+.event-img {
+  width: 390px;
+  height: 390px;
+}
+
+/* hotel-notic */
+/* Wedding */
+/* membership */
+#membership {
+  padding: 100px 0;
+  background-color: var(--color-khaki);
+  color: white;
+}
+.membership-header {}
+.membership-header em {
+  font-style: normal;
+
+}
+.membership-header h2 {}
+#membership p {}
+#membership a.membership-btn {}
+#membership a.join-btn {}

@@ -1,0 +1,66 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/*font-family: 'Nanum Myeongjo', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;500;600;700&display=swap');
+/*font-family: 'STIX Two Text', serif;*/
+
+/* fontawesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+/* reset CSS */
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  max-width: 100vw;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: 16px;
+  color: var(--color-main);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: inline-block;
+  color: var(--color-main);
+  text-decoration: none;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: normal;
+}
+p {
+  margin: 0;
+}
+input {
+  border: none;
+}
+button {
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+  border: none;
+}
+
+:root {
+  --color-main: #193129;
+  --color-green: #3e544d;
+  --color-khaki: #6b624e;
+  --color-sub: #e8e6df; 
+  --color-light-khaki: #e7e0d1;
+  --color-light-gray: #f6f6f6;
+}
+
+/* common CSS */
+.inner {
+  width: 1170px;
+  margin: auto;
+  border: 1px solid red;
+}

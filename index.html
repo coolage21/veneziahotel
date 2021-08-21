@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>베네치아 호텔</title>
+  <link rel="stylesheet" href="resorces/stylesheets/style.css">
+  <link rel="icon" href="resorces/images/favicon.ico">
+  <script defer src="resorces/script/custom.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#none" class="skip">본문 바로가기</a>
+    <div id="welcome">
+      <h1></h1>
+    </div>
+    <header>
+
+      <div class="lnb">
+          <ul class=lnb-inner>
+            <li>
+              <a href="#none">멤버쉽</a>
+            </li>
+            <li>
+              <a href="#none">예약조회</a>
+            </li>
+            <li>
+              <a href="#none">로그인</a>
+            </li>
+            <li>
+              <select name="language" id="language">
+                <option value="KRW">KRW</option>
+                <option value="ENG">ENG</option>
+              </select>
+            </li>
+          </ul>
+        
+      </div>
+      <nav>
+        <div class="nav-inner">
+          <div class="logo">
+            <a href="index.html"><img src="resorces/images/logo.png" alt="hotel venenzia logo"></a>
+          </div>
+          <ul class="gnb">
+            <li>
+              <a href="#">베네치아소개</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#">객실예약</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#">객실</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#">스페셜오퍼</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#">부대시설</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#">웨딩&#38;컨벤션</a>
+              <!-- <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul> -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="main-visual">
+        <h2 class="hide"></h2>
+        <img src="resorces/images/welcome-01.jpg" alt="호텔 메인사진">
+        <form class="reservation" action="">
+          <div class="reservation-header">
+            <h3>빠른 예약하기</h3>
+          </div>
+          <div class="reservation-main">
+            <div>
+              <label for="check-in">CHECK IN</label>
+              <input id="check-in" type="date" value="">
+            </div>
+            <div>
+              <label for="check-out">CHECK OUT</label>
+              <input id="check-out" type="date" value="">
+            </div>
+            <div>
+              <label for="room-number">객실수</label>
+              <input id="room-number" type="number" value="1">
+            </div>
+            <div>
+              <label for="number-parent">어른</label>
+              <input id="number-parent" type="number" value="1">
+            </div>
+            <div>
+              <label for="check-child">어린이</label>
+              <input id="check-child" type="number" value="0">
+            </div>
+            <button>예약하기</button>
+          </div>
+        </form>
+      </section>
+      <section id="promotion">
+        <div class="inner">
+          <div class="promotion-header">
+            <h2>PROMOTION</h2>
+            <p>베네치아호텔에서 준비한 특별한 상품을 만나보세요.</p>
+          </div>
+          <div class="promotion-items">
+            <div class="promotion-item">
+              <div class="promotion-img"><img src="resorces/images/promotion-01.jpg" alt="venezia big3 프로모션 사진"></div>
+              <div class="promotion-desc">
+                <h3>VENEZIA BIG3</h3>
+                <em>2021. 08. 01 ~ 2021. 08. 30</em>
+                <hr>
+                <p>
+                  매일 제공되는 베네치아의 BIG한 특전 3가지를 택하여 취향껏 호캉스를 즐겨보세요! 
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-brown-01.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="promotion-item">
+              <div class="promotion-img">
+                <span>홈페이지<br>전용</span>
+                <img src="resorces/images/promotion-02.jpg" alt="라운지 프로모션 사진">
+              </div>
+              <div class="promotion-desc">
+                <h3>[홈페이지 전용] 라운지 프로모션</h3>
+                <em>2021. 08. 20 ~ 2021. 09. 20</em>
+                <hr>
+                <p>
+                  오직 소수만 누릴 수 있는 프라이빗 럭셔리 서비스의 모든것을 제공해 드립니다.  
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-brown-01.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="promotion-item">
+              <div class="promotion-img">
+                <span>멤버십<br>전용</span>
+                <img src="resorces/images/promotion-03.jpg" alt="멤버십 전용 이벤트 사진">
+              </div>
+              <div class="promotion-desc">
+                <h3>[멤버십 전용] 3박 이상 투숙할인</h3>
+                <em>2021. 08. 20 ~ 2021. 08. 30</em>
+                <hr>
+                <p>
+                  멤버십 대상으로 진행되는 할인 서비스 입니다. 3박 이상 이용시 10%를 할인 해드립니다. 
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-brown-01.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="promotion-btn">
+            <a href="#none">전체보기</a>
+          </div>
+        </div>
+      </section>
+      <section id="event">
+        <div class="inner">
+          <div class="event-header">
+            <h2>VENEZIA HOTEL EVNET</h2>
+            <p>베네치아호텔에서 준비한 특별한 이벤트를 만나보세요.</p>
+          </div>
+          <div class="event-items">
+            <div class="event-item">
+              <div class="event-img">
+                <img src="resorces/images/event-01.jpg" alt="라운지 티 타임 이벤트 사진">
+              </div>
+              <div class="event-desc">
+                <h3>라운지 애프터눈 티 타임 서비스</h3>
+                <em>2021. 08. 01 ~ 2021. 08. 30</em>
+                <hr>
+                <p>
+                  스위트(SUITE) 객실 고객을 위한 스위트(SWEET)한 여유
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-white-01.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-img">
+                <img src="resorces/images/event-02.jpg" alt="얼리버드 사진">
+              </div>
+              <div class="event-desc">
+                <h3>얼리버드 베네치아 윈터바캉스</h3>
+                <em>2021. 08. 20 ~ 2021. 09. 20</em>
+                <hr>
+                <p>
+                  미리 준비하는 따뜻한 겨울 여행
+                  11월, 12월 숙박 예약 시 스파이용권 2매 증정
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-white-01.png" alt="버튼 화살표">
+                </a>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-img">
+                <img src="resorces/images/event-03.jpg" alt="무료 셔틀버스 서비스 사진">
+              </div>
+              <div class="event-desc">
+                <h3>무료 셔틀버스 서비스</h3>
+                <em>2021. 08. 20 ~ 2021. 08. 30</em>
+                <hr>
+                <p>
+                  투숙객들을 위한 무료 셔틀 버스 운행
+                  호텔 - 해운대 해수욕장 - 남포동 구제시장 앞
+                </p>
+                <a href="#none">
+                  자세히보기
+                  <img src="resorces/images/arrow-white-01.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="event-btn">
+            <a href="#none">전체보기</a>
+          </div>
+        </div>
+      </section>
+      <section id="hotel-notice">
+        <div class="inner"></div>
+      </section>
+      <section id="wedding">
+
+      </section>
+      <section id="membership">
+        <div class="inner">
+         <div class="memebership-header">
+          <em>HOTEL VENEZIA</em>
+          <h2>MEMBERSHIP CLUB</h2>
+         </div>
+          <p>호텔 베네치아의 멤버십 클럽 회원이 되신다면 편리하고 쾌적한 베네치아아의 모든 시설을
+            가장 저렴하고 편리하게 이용 하실 수 있으며 기타 프로모션 및 이벤트 참여를 통한 할인 혜택을 받으실 수 있습니다</p>
+          <a href="#none" class="membership-btn">자세히보기</a>
+          <a href="#none" class="join-btn">가입하기</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="inner"></div>
+    </footer>
+  </div>
+</body>
+
+</html>
