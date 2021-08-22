@@ -1,24 +1,7 @@
-/* welcome */
 
-/* 본문바로가기 */
-.skip {
-  width: 100%;
-  height: 60px;
-  background-color: var(--color-main);
-  color: white;
-  font-size: 1.25rem;
-  text-align: center;
-  line-height: 60px;
-  transform: translateY(-60px);
-  position: absolute;
-  transition: .5s;
-  z-index: 999;
-}
-.skip:focus {
-  transform: translateY(0);
-}
+/* 01 welcome */
 
-/* Main visual */
+/* 02 Main visual */
 #main-visual {
   width: 100%;
   height: 785px;
@@ -29,6 +12,7 @@
   height: 100%;
   object-fit: cover;
 }
+/* reservation */
 .reservation {
   position: absolute;
   bottom: 0;
@@ -53,19 +37,19 @@
   align-items: center;
   justify-content: center;
 }
-.reservation-main > div {
+.reservation-main > .date, .reservation-main .number {
+  display: flex;
+}
+.reservation-main > div > div {
   display: flex;
   flex-direction: column;
   margin: 0 20px;
 }
-.reservation-main > div:nth-child(1),
-.reservation-main > div:nth-child(2) {
+.reservation-main > div:nth-child(1) > div {
   width: 200px;
   border-bottom: 1px solid var(--color-main);
 }
-.reservation-main > div:nth-child(3),
-.reservation-main > div:nth-child(4),
-.reservation-main > div:nth-child(5) {
+.reservation-main > div:nth-child(2) > div {
   width: 50px;
 }
 .reservation-main button {
@@ -83,14 +67,20 @@
   cursor: pointer;
 }
 
-/* Promotion */
+/* 03 Promotion, 04 Event */
 #promotion {
   padding: 100px 0;
   background-color: var(--color-sub);
 }
+#event {
+  padding: 100px 0;
+  background: url(../images/event-back.png) no-repeat center center;
+}
+/*header*/
 .promotion-header,
 .event-header {
   text-align: center;
+  margin-bottom: 85px;
 }
 .promotion-header h2,
 .event-header h2 {
@@ -100,8 +90,9 @@
 }
 .promotion-header p,
 .event-header p {
-  margin-bottom: 85px;
+
 }
+/*items*/
 .promotion-items,
 .event-items {
   display: flex;
@@ -109,14 +100,23 @@
 }
 .promotion-item,
 .event-item {
-  width: 370px;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
-.promotion-img {
-  width: 370px;
+.promotion-item {
+  margin-right: 30px;
+}
+.promotion-item:last-child {
+  margin-right: 0;
+}
+/*img*/
+.promotion-img, .event-img {
   height: 280px;
+}
+.promotion-img {
   position: relative;
+
 }
 .promotion-img span {
   display: inline-block;
@@ -128,9 +128,12 @@
   left: 0;
   text-align: center;
   line-height: 1.3rem;
-  padding-top: 9px;
+  padding-top: 12px;
   color: white;
   font-size: 0.9rem;
+}
+.event-img {
+ 
 }
 .promotion-img img,
 .event-img img {
@@ -138,10 +141,13 @@
   height: 100%;
   object-fit: cover;
 }
+/*desc*/
 .promotion-desc,
 .event-desc {
+  height: 280px;
   background-color: white;
   padding: 25px;
+  position: relative;
 }
 .event-desc {
   color: white;
@@ -174,18 +180,23 @@
   margin: 20px 0;
 }
 .event-desc hr {
-  background-color: white;
+  background-color: var(--color-light-khaki);
 }
 .promotion-desc p,
 .event-desc p {
   margin-bottom: 40px;
 }
-
 .event-desc a {
   color: white;
 }
-
-/*전체보기 버튼*/
+/*자세히보기 button*/
+.promotion-desc a,
+.event-desc a {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+/*전체보기 button*/
 .promotion-btn,
 .event-btn {
   text-align: center;
@@ -198,20 +209,8 @@
   font-weight: bold;
 }
 
-/* Event */
-#event {
-  padding: 100px 0;
-  background: url(../images/event-back.png) no-repeat center center;
-}
-.event-item {
-  width: 390px;
-}
-.event-img {
-  width: 390px;
-  height: 390px;
-}
 
-/* hotel-notice */
+/* 05 hotel-notice */
 #hotel-notice {
   padding: 100px 0;
   background-color: var(--color-light-gray);
@@ -223,6 +222,10 @@
 }
 .facilities {
   margin-right: 70px;
+  flex: 3;
+}
+.infra {
+  flex: 1;
 }
 .facilities-header, .infra-header {
   margin-bottom: 35px;
@@ -233,30 +236,35 @@
   font-family: 'STIX Two Text', serif;
   margin-right: 10px;
 }
+.infra-items {
+  display: flex;
+  flex-direction: column;
+}
 .facilities-item, .infra-item {
   display: flex;
 }
 .facilities-item {
-  padding: 30px 0;
-  border-bottom: 1px solid var(--color-khaki);
+  flex-direction: row;
 }
-.facilities-item:nth-child(1) {
-  padding: 0 0 30px 0;
+.facilities-items hr, .infra-items hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-khaki);
+  margin: 30px 0;
 }
-.facilities-item:nth-child(3) {
-  padding: 30px 0 0 0;
-  border-bottom: none;
+.infra-items hr {
+  display: none;
 }
 .infra-item {
   flex-direction: column;
   margin-bottom: 55px;
 }
 .facilities-img, .infra-img {
-  /* width: 300px;
-  height: 190px; */
+
 }
 .facilities-img {
   margin-right: 25px;
+  flex: 2;
 }
 .infra-img {
   margin-bottom: 25px;
@@ -264,6 +272,11 @@
 .facilities-img img,
 .infra-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.facilities-desc {
+  flex: 3;
 }
 .facilities-desc h4, .infra-desc h4 {
   font-size: 1.25rem;
@@ -273,15 +286,12 @@
 .facilities-desc p {
   margin-bottom: 10px;
 }
-.facilities-item {
-
-}
 .infra a {
   text-decoration: underline;
   font-weight: bold;
   color: var(--color-khaki);
 }
-/* Wedding */
+/* 06 Wedding */
 #wedding {
   width: 100%;
   display: flex;
@@ -313,6 +323,7 @@
   margin-bottom: 20px;
 }
 .wedding-header h2 span {
+  font-size: 1.75rem;
   font-family: 'Nanum Myeongjo', serif;
   font-weight: 800;
 }
@@ -324,35 +335,36 @@
 .wedding-desc {
   color: var(--color-khaki);
   display: flex;
-  margin-bottom: 60px;
+  flex-direction: row;
+  margin-bottom: 50px;
 }
 .wedding-desc > div {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
+}
+.wedding-desc > div:last-child {
+  margin-right: 0;
 }
 .wedding-desc > div span {
  flex: 1; 
 }
-.wedding-desc > div span:nth-child(1) {
-  border-bottom: 1px solid var(--color-khaki);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  margin-right: 35px;
+.wedding-desc hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-khaki);
+  margin: 10px 0;
 }
-
+.wedding-desc > div span:nth-child(1) {
+  font-weight: bold;
+}
 .wedding-btn {
-  display: inline-block;
-  font-size: 1.125rem;
-  width: 160px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
   background-color: var(--color-green);
   color: var(--color-sub);
 }
-/* membership */
+
+/* 07 membership */
 #membership {
   padding: 100px 0;
   background-color: var(--color-khaki);
@@ -371,7 +383,6 @@
   margin-bottom: 5px;
   font-style: normal;
   color: var(--color-light-khaki);
-
 }
 .membership-header h2 {
   font-size: 1.75rem;
@@ -385,9 +396,6 @@
 }
 #membership a {
   display: inline-block;
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
 }
 #membership a.membership-btn {
   border: 1px solid var(--color-light-khaki);
