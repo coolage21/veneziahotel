@@ -62,5 +62,25 @@ button {
 .inner {
   width: 1170px;
   margin: auto;
-  border: 1px solid red;
+}
+
+/*자세히 보기 버튼*/
+.promotion-desc a,
+.event-desc a,
+.facilities-desc a {
+  font-weight: bold;
+  padding: 5px 0;
+  color: var(--color-khaki);
+}
+
+.promotion-desc a img,
+.event-desc a img,
+.facilities-desc a img {
+  width: 30px;
+  transition: .6s;
+}
+.promotion-desc a:hover img,
+.event-desc a:hover img,
+.facilities-desc a:hover img {
+  transform: translateX(20px);
 }

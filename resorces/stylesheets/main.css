@@ -69,7 +69,7 @@
   width: 50px;
 }
 .reservation-main button {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   background-color: var(--color-main);
   color: white;
   margin-left: 80px;
@@ -181,24 +181,8 @@
   margin-bottom: 40px;
 }
 
-/*자세히 보기 버튼*/
-.promotion-desc a,
-.event-desc a {
-  font-weight: bold;
-  padding: 5px 0;
-  color: var(--color-khaki);
-}
 .event-desc a {
   color: white;
-}
-.promotion-desc a img,
-.event-desc a img {
-  width: 30px;
-  transition: .6s;
-}
-.promotion-desc a:hover img,
-.event-desc a:hover img {
-  transform: translateX(20px);
 }
 
 /*전체보기 버튼*/
@@ -210,7 +194,6 @@
 .event-btn a {
   font-size: 1.45rem;
   text-decoration: underline;
-  float: center;
   margin-top: 60px;
   font-weight: bold;
 }
@@ -228,20 +211,192 @@
   height: 390px;
 }
 
-/* hotel-notic */
+/* hotel-notice */
+#hotel-notice {
+  padding: 100px 0;
+  background-color: var(--color-light-gray);
+}
+.hotel-notice-inner {
+  display: flex;
+  width: 1170px;
+  margin: auto;
+}
+.facilities {
+  margin-right: 70px;
+}
+.facilities-header, .infra-header {
+  margin-bottom: 35px;
+  display: flex;
+}
+.facilities-header h3, .infra-header h3 {
+  font-size: 1.75rem;
+  font-family: 'STIX Two Text', serif;
+  margin-right: 10px;
+}
+.facilities-item, .infra-item {
+  display: flex;
+}
+.facilities-item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-khaki);
+}
+.facilities-item:nth-child(1) {
+  padding: 0 0 30px 0;
+}
+.facilities-item:nth-child(3) {
+  padding: 30px 0 0 0;
+  border-bottom: none;
+}
+.infra-item {
+  flex-direction: column;
+  margin-bottom: 55px;
+}
+.facilities-img, .infra-img {
+  /* width: 300px;
+  height: 190px; */
+}
+.facilities-img {
+  margin-right: 25px;
+}
+.infra-img {
+  margin-bottom: 25px;
+}
+.facilities-img img,
+.infra-img img {
+  width: 100%;
+}
+.facilities-desc h4, .infra-desc h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.facilities-desc p {
+  margin-bottom: 10px;
+}
+.facilities-item {
+
+}
+.infra a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--color-khaki);
+}
 /* Wedding */
+#wedding {
+  width: 100%;
+  display: flex;
+}
+.wedding-img {
+  flex: 1;
+}
+.wedding-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wedding-item {
+  flex: 1;
+  background-color: var(--color-sub);
+  padding: 80px 70px;
+}
+.wedding-header {
+
+}
+.wedding-header em {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.wedding-header h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.wedding-header h2 span {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+}
+.wedding-header p {
+  font-size: 1.125rem;
+  color: var(--color-khaki);
+  margin-bottom: 70px;
+}
+.wedding-desc {
+  color: var(--color-khaki);
+  display: flex;
+  margin-bottom: 60px;
+}
+.wedding-desc > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wedding-desc > div span {
+ flex: 1; 
+}
+.wedding-desc > div span:nth-child(1) {
+  border-bottom: 1px solid var(--color-khaki);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-right: 35px;
+}
+
+.wedding-btn {
+  display: inline-block;
+  font-size: 1.125rem;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: var(--color-green);
+  color: var(--color-sub);
+}
 /* membership */
 #membership {
   padding: 100px 0;
   background-color: var(--color-khaki);
   color: white;
+  text-align: center;
 }
-.membership-header {}
+.membership-header {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 300px;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
 .membership-header em {
+  display: block;
+  margin-bottom: 5px;
   font-style: normal;
+  color: var(--color-light-khaki);
 
 }
-.membership-header h2 {}
-#membership p {}
-#membership a.membership-btn {}
-#membership a.join-btn {}
+.membership-header h2 {
+  font-size: 1.75rem;
+  font-family: 'STIX Two Text', serif;
+}
+#membership p {
+  margin-bottom: 50px;
+}
+#membership p, #membership a {
+  font-size: 1.125rem;
+}
+#membership a {
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+}
+#membership a.membership-btn {
+  border: 1px solid var(--color-light-khaki);
+  color: var(--color-light-khaki);
+  margin-right: 10px;
+}
+#membership a.join-btn {
+  border: 1px solid var(--color-light-khaki);
+  background-color: var(--color-light-khaki);
+  color: var(--color-khaki);
+}
+
