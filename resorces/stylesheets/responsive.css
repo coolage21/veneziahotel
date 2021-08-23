@@ -9,6 +9,12 @@
   }
 /* header */
 /* 01 Welcome */
+.homepage-btn {
+ width: 145px;
+}
+.welcome-desc {
+  width: 60vw;
+}
 /* 02 Main-visual */
 .reservation-main > div div {
   margin: 0 10px;
@@ -47,14 +53,29 @@
 
 }
 @media only screen and (max-width: 1023px) {
-  * {
-    font-size: 15px;
-  }
-  #promotion, #event, #hotel-notice, #membership {
-    padding: 60px 0;
-  }
-  /* header */
+* {
+  font-size: 15px;
+}
+#promotion, #event, #hotel-notice, #membership {
+  padding: 60px 0;
+}
+/* header */
 /* 01 Welcome */
+.slider::before {
+  background: linear-gradient(transparent, var(--color-main));
+}
+.welcome-desc {
+  width: 90vw;
+}
+.welcome-desc h1, .welcome-desc h1 span {
+  font-size: 3rem;
+}
+.welcome-desc em {
+  font-size: 1.125rem;
+}
+.welcome-desc p {
+  font-size: 1.25rem;
+}
 /* 02 Main-visual */
 .reservation-main > div div {
   margin: 0 5px;
@@ -123,26 +144,131 @@
     line-height: 30px;
   }
   /* header */
+  .trigger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 85px;
+    right: 35px;
+    z-index: 999;
+    background-color: transparent;
+    transition: .4s;
+  }
+  .trigger span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: var(--color-main);
+    transition: .4s;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active {
+    right: 200px;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /*gnb*/
+  .gnb {
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--color-light-khaki);
+    box-shadow: 0 4px 10px rgba(128, 128, 128, 0.4);
+    position: absolute;
+    top: 0px;
+    right: -200px;
+    flex-direction: column;
+    display: ;
+    transition: .4s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb > li > a {
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+  .gnb ul::before {
+    display: none;
+  }
+  .gnb ul {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+  .gnb ul a {
+    padding: 0 0 0 30px;
+    width: 100%;
+    transition: .4s;
+    border-bottom: none;
+    position: relative;
+  }
+  .gnb ul a::before {
+    content: '•';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+  }
+  .gnb ul a:hover {
+    border-bottom: none;
+    font-weight: bold;
+  }
 /* 01 Welcome */
+#welcome .logo {
+  width: 150px;
+}
+.homepage-btn {
+  width: 145px;
+}
 /* 02 Main-visual */
+.reservation-hedaer {
+  height: 30px;
+}
 .reservation-main {
+  padding: 10px 0 50px 0;
   position: relative;
-
 }
 .reservation-main > div {
-  border: 1px solid red;
  
 }
-.reservation-main > .date > div {
-  flex-direction: row;
-  flex: 1;
+.reservation-main > div > div {
 }
-.reservation-main > .date > label {
-  width: 50px;
+.reservation-main > .date > div {
+  flex: 1;
+  width: 160px;
+  }
+.reservation-main > .number > div {
+
 }
 .reservation-main button {
   position: absolute;
-  bottom: 8px;
+  bottom: 10px;
 }
 
 /* 03 Promotion */
@@ -198,10 +324,82 @@
 }
 /* footer */
 }
+@media only screen and (max-width: 580px) {
+  /* 01 welcome */
+  .welcome-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* 02 Main-visual */
+  .reservation-main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  
+  .reservation-main > div {
+    margin-top: 0;
+    width: 100%;
+  }
+  .reservation-main input {
+    font-size: 1.125rem;
+  }
+  .reservation-main > div > div {
+    flex-direction: row;
+  
+  }
+  .reservation-main > div > div label {
+    font-size: 0.9rem;
+  }
+  .reservation-main > .date {
+    margin-bottom: 15px;
+    justify-content: space-between;
+  }
+  .reservation-main > .date label {
+    width: 50px;
+  }
+  .reservation-main > .date input {
+    width: 150px;
+  }
+  .reservation-main > .number {
+    width: 70%;
+  }
+  .reservation-main > .number > div {
+    flex: 1;
+  }
+  .reservation-main > .number > div input {
+    width: 30px;
+  }
+  .reservation-main > .number > div label {
+    width: 50px;
+  }
+  .reservation button {
+    right: 10px;
+  }
+
+}
 @media only screen and (max-width: 480px) {
   /* header */
 /* 01 Welcome */
+
 /* 02 Main-visual */
+.reservation-main {
+  padding: 15px 15px 60px 15px;
+}
+.reservation-main .date div {
+  flex-direction: column;
+  width: 100%;
+}
+.reservation-main .date label {
+  width: 100px;
+}
+.reservation-main > .number {
+  width: 100%;
+}
+.reservation-main button {
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* 03 Promotion */
 .promotion-item, .event-item {
   flex-direction: column;

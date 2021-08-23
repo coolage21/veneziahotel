@@ -1,6 +1,211 @@
 
 /* 01 welcome */
+#welcome {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  color: white;
+  transition: .4s;
+}
+/*bx slider*/
+.bx-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  /* -moz-box-shadow: none;
+  -webkit-box-shadow: none; */
+  box-shadow: none;
+  border: 0;
+}
+.slider {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.slider::before {
+  /* content:'';
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 30px;
+  height: 30px;
+  background-color: red; */
 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--color-main));
+  z-index: 999999999999;
+}
+.slider > div img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  bottom: 0;
+}
+.bx-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.bx-controls-direction {
+  display: none;
+}
+.bx-controls-auto {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  z-index: 9999999999;
+  color: white;
+}
+.bx-controls-auto-item {
+  color: white;
+
+}
+.bx-start, .bx-stop {
+  transform: scale(1.3);
+}
+.active {
+}
+
+.bx-stop {
+
+}
+.bx-pager.bx-default-pager {
+  display: none;
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 0;
+  border :1px solid red; */
+}
+/*bx slider end*/
+
+#welcome.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+/* .welcome-img, .welcome-main{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+.welcome-main {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ z-index: 2;
+}
+.welcome-img::before {
+  /* content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--color-main));
+  z-index: 1; */
+}
+/* .welcome-img img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+} */
+#welcome .logo {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  left: 0;
+}
+#welcome .logo img {
+  width: 100%;
+}
+#welcome select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border :1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 1px 5px;
+}
+#welcome select option {
+  color: var(--color-main);
+}
+.welcome-desc {
+  width: 700px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.welcome-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.welcome-desc h1 {
+  font-family: 'STIX Two Text', serif;
+  font-size: 3.5rem;
+  line-height: 0.9em;
+  margin-right: 10px;
+}
+.welcome-desc h1 span{
+  font-size: 3.5rem;
+  line-height: 0.9em;
+  font-family: 'STIX Two Text', serif;
+  display: block;
+}
+.welcome-desc em {
+  margin-bottom: 3px;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: var(--color-sub);
+  
+}
+.welcome-desc hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background: var(--color-sub);
+  margin: 30px 0 20px 0;
+}
+.welcome-desc p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 1.3em;
+  margin-bottom: 35px;
+}
+.welcome-desc a {
+  border: 1px solid var(--color-sub);
+  font-weight: bold;
+} 
+.homepage-btn {
+  background-color: var(--color-sub);
+  margin-right: 10px;
+}
+.quick-reservation-btn {
+  color: var(--color-sub);
+}
 /* 02 Main visual */
 #main-visual {
   width: 100%;
@@ -31,7 +236,8 @@
   color: white;
 }
 .reservation-main {
-  height: 100px;
+  /* height: 100px; */
+  padding: 20px 0;
   background-color: white;
   display: flex;
   align-items: center;
@@ -45,11 +251,11 @@
   flex-direction: column;
   margin: 0 20px;
 }
-.reservation-main > div:nth-child(1) > div {
-  width: 200px;
+.reservation-main > .date > div {
+  /* width: 200px; */
   border-bottom: 1px solid var(--color-main);
 }
-.reservation-main > div:nth-child(2) > div {
+.reservation-main > .number > div {
   width: 50px;
 }
 .reservation-main button {

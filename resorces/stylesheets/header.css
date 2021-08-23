@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   background-color: var(--color-sub);
   z-index: 99;
 }
@@ -37,7 +37,7 @@ header {
   background-color: var(--color-main);
   position: absolute;
   right: 0;
-  top: 18px;
+  top: 5px;
 }
 .lnb select {
   border: none;
@@ -66,8 +66,10 @@ nav .logo img {
 .gnb {
   display: flex; 
   font-size: 1.125rem;
+
 }
 .gnb > li {
+  position: relative;
   /* margin-right: 28px; */
 }
 .gnb > li:last-child {
@@ -75,10 +77,53 @@ nav .logo img {
 }
 .gnb > li > a {
   display: inline-block;
-  width: ;
-  padding: 5px 14px; 
+  padding: 30px 14px;       
 }
-.gnb ul {}
+.gnb ul {
+  width: 130px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+
+}
+.gnb > li.on ul {
+  opacity: 1;
+  visibility: visible;
+}
+.gnb ul::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.gnb ul a {
+  padding: 5px 0;
+  width: 100%;
+  transition: .4s;
+  border-bottom: 1px solid white;
+  font-size: 1rem;
+}
+.gnb ul a:hover {
+  border-bottom: 1px solid var(--color-khaki);
+}
+/* .gnb ul {
+  display: none;
+} */
 .gnb ul li {}
 .gnb ul li a {}
+
+
+/*trigger*/
+.trigger {
+  display: none;
+}
 
