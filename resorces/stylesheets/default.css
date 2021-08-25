@@ -1,9 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
-/*font-family: 'Nanum Myeongjo', serif;*/
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;500;600;700&display=swap');
-/*font-family: 'STIX Two Text', serif;*/
 
 /* fontawesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
@@ -15,7 +13,6 @@
   font-size: 16px;
   line-height: 1.5em;
 }
-
 body {
   margin: 0;
   max-width: 100vw;
@@ -46,7 +43,6 @@ button {
   cursor: pointer;
   border: none;
 }
-
 :root {
   --color-main: #193129;
   --color-green: #3e544d;
@@ -54,6 +50,14 @@ button {
   --color-sub: #e8e6df; 
   --color-light-khaki: #e7e0d1;
   --color-light-gray: #f6f6f6;
+}
+.hide {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /* common CSS */
@@ -85,10 +89,9 @@ button {
 .event-desc a,
 .facilities-desc a {
   font-weight: bold;
-  padding: 5px 0;
+  padding-top: 5px;
   color: var(--color-khaki);
 }
-
 .promotion-desc a img,
 .event-desc a img,
 .facilities-desc a img {

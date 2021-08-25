@@ -7,133 +7,133 @@
     height: 35px;
     line-height: 30px;
   }
-/* header */
-/* 01 Welcome */
-.homepage-btn {
- width: 145px;
-}
-.welcome-desc {
-  width: 60vw;
-}
-/* 02 Main-visual */
-.reservation-main > div div {
-  margin: 0 10px;
-}
-.reservation-main > .date {
-  /* width: 430px; */
-}
-.reservation-main .number > div {
 
-}
-.reservation-main button {
-  margin-left: 0px;
-}
-.reservation-main input {
-  font-size: 1.25rem;
-}
-/* 03 Promotion */
-.promotion-desc, .infra-desc {
+  /* 01 Welcome */
+  .homepage-btn {
+  width: 145px;
+  }
+  .welcome-desc {
+    width: 60vw;
+  }
 
-}
-/* 04 Event */
-/* 05 hotel-notice */
-/* 06 Wedding */
-.wedding-item {
-  padding: 60px 50px;
-}
-/* 07 membership */
-/* footer */
-.footer-inner {
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footer-info {
-  margin-bottom: 30px;
+  /* 02 Main-visual */
+  .reservation-main > div div {
+    margin: 0 10px;
+  }
+  .reservation-main input[type='button'] {
+    margin-left: 0px;
+  }
+  .reservation-main input {
+    font-size: 1.25rem;
+  }
+
+  /* 06 Wedding */
+  .wedding-item {
+    padding: 60px 50px;
+  }
+
+  /* footer */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-info {
+    margin-bottom: 30px;
+  }
 }
 
+  @media only screen and (max-width: 1023px) {
+  * {
+    font-size: 15px;
+  }
+  #promotion, #event, #hotel-notice, #membership {
+    padding: 60px 0;
+  }
+
+  /* 01 Welcome */
+  .slider::before {
+    background: linear-gradient(to bottom, transparent, #193129);
+  }
+  .welcome-desc {
+    width: 90vw;
+  }
+  .welcome-desc h1, .welcome-desc h1 span {
+    font-size: 3rem;
+  }
+  .welcome-desc em {
+    font-size: 1.125rem;
+  }
+  .welcome-desc p {
+    font-size: 1.25rem;
+  }
+
+  /* 02 Main-visual */
+  .reservation-main > div div {
+    margin: 0 5px;
+  }
+
+  /* 03 Promotion 04 Event */
+  .promotion-header,
+  .event-header {
+    margin-bottom: 50px;
+  }
+  .promotion-items,
+  .event-items {
+    flex-direction: column;
+  }
+  .promotion-item,
+  .event-item {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .promotion-item:last-child,
+  .event-item:last-child {
+    margin-bottom: 0px;
+  }
+  .promotion-img, .event-img {
+    width: 360px;
+  }
+  .promotion-desc, .event-desc {
+    flex: 1;
+  }
+  .event-desc::before {
+    width: 12px;
+    height: 12px;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--color-main);
+  }
+  
+  /* 05 hotel-notice */
+  .hotel-notice-inner {
+    flex-direction: column;
+  }
+  .facilities {
+    margin-bottom: 60px;
+  }
+  .facilities {
+    margin-right: 0;
+  }
+  .infra-items {
+    flex-direction: row;
+  }
+  .infra-item {
+    flex: 1;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .infra-item:last-child {
+    margin-right: 0;
+  }
+
+  /* 06 Wedding */
+  .wedding-item {
+    padding: 40px 30px;
+  }
 }
-@media only screen and (max-width: 1023px) {
-* {
-  font-size: 15px;
-}
-#promotion, #event, #hotel-notice, #membership {
-  padding: 60px 0;
-}
-/* header */
-/* 01 Welcome */
-.slider::before {
-  background: linear-gradient(transparent, var(--color-main));
-}
-.welcome-desc {
-  width: 90vw;
-}
-.welcome-desc h1, .welcome-desc h1 span {
-  font-size: 3rem;
-}
-.welcome-desc em {
-  font-size: 1.125rem;
-}
-.welcome-desc p {
-  font-size: 1.25rem;
-}
-/* 02 Main-visual */
-.reservation-main > div div {
-  margin: 0 5px;
-}
-/* 03 Promotion */
-.promotion-header,
-.event-header {
-  margin-bottom: 50px;
-}
-.promotion-items,
-.event-items {
-  flex-direction: column;
-}
-.promotion-item,
-.event-item {
-  flex-direction: row;
-  margin-right: 0;
-  margin-bottom: 30px;
-}
-.promotion-item:last-child,
-.event-item:last-child {
-  margin-bottom: 0px;
-}
-.promotion-img, .event-img {
-  width: 360px;
-}
-.promotion-desc, .event-desc {
-  flex: 1;
-}
-/* 04 Event */
-/* 05 hotel-notice */
-.hotel-notice-inner {
-  flex-direction: column;
-}
-.facilities {
-  margin-bottom: 60px;
-}
-.facilities {
-  margin-right: 0;
-}
-.infra-items {
-  flex-direction: row;
-}
-.infra-item {
-  flex: 1;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-.infra-item:last-child {
-  margin-right: 0;
-}
-/* 06 Wedding */
-.wedding-item {
-  padding: 40px 30px;
-}
-/* 07 membership */
-/* footer */
-}
+
 @media only screen and (max-width: 768px) {
   * {
     font-size: 14.5px;
@@ -143,15 +143,18 @@
     height: 32px;
     line-height: 30px;
   }
+
   /* header */
+  .nav {
+    position: relative;
+  }
   .trigger {
     display: block;
     cursor: pointer;
     width: 30px;
     height: 20px;
+    right: 30px;
     position: absolute;
-    top: 85px;
-    right: 35px;
     z-index: 999;
     background-color: transparent;
     transition: .4s;
@@ -175,6 +178,9 @@
   .trigger.active {
     right: 200px;
   }
+  .trigger.active span {
+    background-color: white;
+  }
   .trigger.active span:nth-child(1) {
     top: 50%;
     transform: rotate(45deg);
@@ -197,11 +203,24 @@
     top: 0px;
     right: -200px;
     flex-direction: column;
-    display: ;
     transition: .4s;
+  }
+  .gnb::before {
+    display: none;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    z-index: -1;
   }
   .gnb.active {
     right: 0;
+  }
+  .gnb.active::before {
+    display: block;
   }
   .gnb > li > a {
     display: block;
@@ -212,6 +231,7 @@
     display: none;
   }
   .gnb ul {
+    display: none;
     width: 100%;
     position: relative;
     top: 0;
@@ -221,6 +241,10 @@
     opacity: 1;
     visibility: visible;
     background-color: transparent;
+    box-shadow: none;
+  }
+  .gnb > li.on ul {
+    display: block;
   }
   .gnb ul a {
     padding: 0 0 0 30px;
@@ -239,104 +263,112 @@
     border-bottom: none;
     font-weight: bold;
   }
-/* 01 Welcome */
-#welcome .logo {
-  width: 150px;
-}
-.homepage-btn {
-  width: 145px;
-}
-/* 02 Main-visual */
-.reservation-hedaer {
-  height: 30px;
-}
-.reservation-main {
-  padding: 10px 0 50px 0;
-  position: relative;
-}
-.reservation-main > div {
- 
-}
-.reservation-main > div > div {
-}
-.reservation-main > .date > div {
-  flex: 1;
-  width: 160px;
+
+  
+  /* 00 aside */
+  aside {
+    width: 70px;
+    height: 90px;
+    right: 10px;
+  }  
+  aside a, aside span {
+    font-size: 0.9rem;
   }
-.reservation-main > .number > div {
+  aside .far {
+    font-size: 1.5rem;
+  }
 
-}
-.reservation-main button {
-  position: absolute;
-  bottom: 10px;
+  /* 01 Welcome */
+  #welcome .logo {
+    width: 150px;
+  }
+  .homepage-btn {
+    width: 145px;
+  }
+
+  /* 02 Main-visual */
+  .reservation-hedaer {
+    height: 30px;
+  }
+  .reservation-main {
+    padding: 10px 0 50px 0;
+    position: relative;
+  }
+  .reservation-main > .date > div {
+    flex: 1;
+    width: 160px;
+    }
+  .reservation-main input[type='button'] {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  /* 03 Promotion 04 Event */
+  .promotion-img, .event-img {
+    width: 40vw;
+  }
+
+  /* 05 hotel-notice */
+  .hotel-notice-inner {
+    flex-direction: column;
+  }
+  .infra-items {
+    flex-direction: column;
+  }
+  .infra-item {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .infra-items hr {
+    display: block;
+  }
+  .infra-img {
+    margin-right: 25px;
+    flex: 2;
+    margin-bottom: 0;
+  }
+  .infra-desc {
+    flex: 3;
+    height: 100%;
+  }
+  .infra-btn {
+    margin-top: 30px;
+  }
+
+  /* 06 Wedding */
+  #wedding {
+    flex-direction: column;
+  }
+  .wedding-header p {
+    margin-bottom: 40px;
+  }
+  .wedding-img {
+    height: 100px;
+  }
+  .wedding-desc {
+    margin-bottom: 40px;
+  }
+
+  /* 07 membership */
+  #membership p {
+    margin-bottom: 40px;
+  }
 }
 
-/* 03 Promotion */
-.promotion-img, .event-img {
-  width: 40vw;
-}
-/* 04 Event */
-
-/* 05 hotel-notice */
-.hotel-notice-inner {
-  flex-direction: column;
-}
-.infra-items {
-  flex-direction: column;
-}
-.infra-item {
-  flex-direction: row;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-.infra-items hr {
-  display: block;
-}
-.infra-img {
-  margin-right: 25px;
-  flex: 2;
-  margin-bottom: 0;
-}
-.infra-desc {
-  flex: 3;
-  height: 100%;
-}
-.infra-btn {
-  margin-top: 30px;
-}
-/* 06 Wedding */
-#wedding {
-  flex-direction: column;
-}
-.wedding-header p {
-  margin-bottom: 40px;
-}
-.wedding-img {
-  height: 100px;
-}
-.wedding-desc {
-  margin-bottom: 40px;
-}
-
-/* 07 membership */
-#membership p {
-  margin-bottom: 40px;
-}
-/* footer */
-}
 @media only screen and (max-width: 580px) {
   /* 01 welcome */
   .welcome-header {
     flex-direction: column;
     align-items: flex-start;
   }
+
   /* 02 Main-visual */
   .reservation-main {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
   }
-  
   .reservation-main > div {
     margin-top: 0;
     width: 100%;
@@ -346,7 +378,6 @@
   }
   .reservation-main > div > div {
     flex-direction: row;
-  
   }
   .reservation-main > div > div label {
     font-size: 0.9rem;
@@ -373,56 +404,79 @@
   .reservation-main > .number > div label {
     width: 50px;
   }
-  .reservation button {
+  .reservation input[type='button'] {
     right: 10px;
   }
-
 }
+
 @media only screen and (max-width: 480px) {
-  /* header */
-/* 01 Welcome */
+  .inner, .lnb-inner, .nav-inner, .footer-inner, .reservation, .hotel-notice-inner {
+    width: 85vw;
+  }
 
-/* 02 Main-visual */
-.reservation-main {
-  padding: 15px 15px 60px 15px;
-}
-.reservation-main .date div {
-  flex-direction: column;
-  width: 100%;
-}
-.reservation-main .date label {
-  width: 100px;
-}
-.reservation-main > .number {
-  width: 100%;
-}
-.reservation-main button {
-  left: 50%;
-  transform: translateX(-50%);
-}
-/* 03 Promotion */
-.promotion-item, .event-item {
-  flex-direction: column;
-}
-.promotion-img, .event-img {
-  width: 100%;
-}
-/* 04 Event */
-/* 05 hotel-notice */
-.facilities-item, .infra-item {
-  flex-direction: column;
-}
-.facilities-img, .infra-img {
-  margin-right: 0;
-  margin-bottom: 10px;
-}
-/* 06 Wedding */
-.wedding-header h2 {
-  line-height: 2rem;
-}
-.wedding-header h2 span {
-  display: block;
-}
-/* 07 membership */
-/* footer */
+  /* header */
+  .trigger {
+    width: 25px;
+    height: 17px;
+    right: 25px;
+  }
+
+  /* 00 aside */
+  aside {
+    top: calc( 100vh + 15px );
+  }
+  /* 02 Main-visual */
+  #main-visual {
+    height: 100vh;
+  }
+  .reservation-main {
+    padding: 15px 15px 60px 15px;
+  }
+  .reservation-main .date div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .reservation-main .date label {
+    width: 100px;
+  }
+  .reservation-main > .number {
+    width: 100%;
+  }
+  .reservation-main input[type='button'] {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* 03 Promotion 04 Event */
+  .promotion-item, .event-item {
+    flex-direction: column;
+  }
+  .promotion-img, .event-img {
+    width: 100%;
+  }
+  /* 04 Event */
+  .event-desc::before {
+    width: 12px;
+    height: 12px;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  /* 05 hotel-notice */
+  .facilities-item, .infra-item {
+    flex-direction: column;
+  }
+  .facilities-img, .infra-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* 06 Wedding */
+  .wedding-header h2 {
+    line-height: 2rem;
+  }
+  .wedding-header h2 span {
+    display: block;
+  }
 }

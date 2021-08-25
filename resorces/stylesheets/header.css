@@ -12,6 +12,10 @@ header {
   text-align: right;
   height: 50px;
   display: flex;
+  transition: .4s;
+}
+.lnb.hidden {
+  display: none;
 }
 .lnb-inner {
   width: 1170px;
@@ -66,18 +70,14 @@ nav .logo img {
 .gnb {
   display: flex; 
   font-size: 1.125rem;
-
 }
 .gnb > li {
   position: relative;
-  /* margin-right: 28px; */
-}
-.gnb > li:last-child {
-  /* margin-right: 0; */
 }
 .gnb > li > a {
   display: inline-block;
-  padding: 30px 14px;       
+  padding: 30px 11px;  
+  font-size: 1.125rem; 
 }
 .gnb ul {
   width: 130px;
@@ -89,7 +89,7 @@ nav .logo img {
   padding: 10px;
   opacity: 0;
   visibility: hidden;
-
+  box-shadow: 0 0 5px gray;
 }
 .gnb > li.on ul {
   opacity: 1;
@@ -115,12 +115,6 @@ nav .logo img {
 .gnb ul a:hover {
   border-bottom: 1px solid var(--color-khaki);
 }
-/* .gnb ul {
-  display: none;
-} */
-.gnb ul li {}
-.gnb ul li a {}
-
 
 /*trigger*/
 .trigger {

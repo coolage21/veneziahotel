@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
     $(this).removeClass("on");
   });
   
-  //bx slider
+  //welcome page(bx slider)
   $('.slider').bxSlider({
     auto: true,
     autoControls: true,
@@ -25,11 +25,31 @@ window.addEventListener('load', function(){
     welcomePage.classList.add('hidden');
   });
 
+  //header
+  let lnb = document.querySelector('.lnb')
+  window.addEventListener('scroll', function(){
+    if(window.scrollY != 0) {
+      lnb.classList.add('hidden');
+    } else {
+      lnb.classList.remove('hidden');
+    }
+  })
+
   //trigger
   let trigger = document.querySelector('.trigger');
   let gnb = document.querySelector('.gnb');
   trigger.addEventListener('click', function(){
     trigger.classList.toggle('active');
     gnb.classList.toggle  ('active');
+  })
+
+  //aside
+  let aside = document.querySelector('aside')
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 789){
+      aside.classList.add('fixed');
+    } else {
+      aside.classList.remove('fixed');
+    }
   })
 })

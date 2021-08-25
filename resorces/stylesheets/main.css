@@ -1,3 +1,43 @@
+/* 00 aside */
+  aside {
+    text-align: center;
+    width: 100px;
+    height: 120px;
+    background-color: var(--color-khaki);
+    position: absolute;
+    top: 800px;
+    right: 30px;
+    box-shadow: 0 0 5px rgba(32, 32, 32, 0.575);
+    z-index: 2;
+  }
+  aside a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.25rem;
+
+  }
+  aside .far {
+    font-size: 2rem;
+    margin-bottom: 4px;
+    color: var(--color-light-khaki);
+  }
+  aside span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1em;
+  }
+  aside:hover {
+    animation: myreservation 1s linear infinite;
+  }
+  aside.fixed {
+    position: fixed;
+    top: 110px;
+  }
 
 /* 01 welcome */
 #welcome {
@@ -15,8 +55,8 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  /* -moz-box-shadow: none;
-  -webkit-box-shadow: none; */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
 }
@@ -28,22 +68,13 @@
   position: relative;
 }
 .slider::before {
-  /* content:'';
-  position:absolute;
-  top: 0;
-  left: 0;
-  z-index: 99999999;
-  width: 30px;
-  height: 30px;
-  background-color: red; */
-
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, transparent, var(--color-main));
+  background: linear-gradient(to right bottom, transparent, #193129);
   z-index: 999999999999;
 }
 .slider > div img {
@@ -75,24 +106,12 @@
 }
 .bx-controls-auto-item {
   color: white;
-
 }
 .bx-start, .bx-stop {
   transform: scale(1.3);
 }
-.active {
-}
-
-.bx-stop {
-
-}
 .bx-pager.bx-default-pager {
   display: none;
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-top: 0;
-  border :1px solid red; */
 }
 /*bx slider end*/
 
@@ -100,13 +119,6 @@
   opacity: 0;
   visibility: hidden;
 }
-/* .welcome-img, .welcome-main{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 .welcome-main {
   position: absolute;
   width: 90vw;
@@ -116,21 +128,6 @@
  transform: translate(-50%, -50%);
  z-index: 2;
 }
-.welcome-img::before {
-  /* content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, transparent, var(--color-main));
-  z-index: 1; */
-}
-/* .welcome-img img{
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-} */
 #welcome .logo {
   position: absolute;
   width: 200px;
@@ -153,10 +150,11 @@
   color: var(--color-main);
 }
 .welcome-desc {
-  width: 700px;
+  width: 600px;
   position: absolute;
   bottom: 0;
   right: 0;
+  animation: welcome 1.2s linear both;
 }
 .welcome-header {
   display: flex;
@@ -165,12 +163,12 @@
 }
 .welcome-desc h1 {
   font-family: 'STIX Two Text', serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 0.9em;
   margin-right: 10px;
 }
 .welcome-desc h1 span{
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 0.9em;
   font-family: 'STIX Two Text', serif;
   display: block;
@@ -180,17 +178,17 @@
   font-style: normal;
   font-size: 1.25rem;
   color: var(--color-sub);
-  
 }
 .welcome-desc hr {
   border: none;
   width: 100%;
   height: 1px;
+  border: none;
   background: var(--color-sub);
-  margin: 30px 0 20px 0;
+  margin: 20px 0;
 }
 .welcome-desc p {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: lighter;
   line-height: 1.3em;
   margin-bottom: 35px;
@@ -206,6 +204,7 @@
 .quick-reservation-btn {
   color: var(--color-sub);
 }
+
 /* 02 Main visual */
 #main-visual {
   width: 100%;
@@ -236,7 +235,6 @@
   color: white;
 }
 .reservation-main {
-  /* height: 100px; */
   padding: 20px 0;
   background-color: white;
   display: flex;
@@ -252,13 +250,12 @@
   margin: 0 20px;
 }
 .reservation-main > .date > div {
-  /* width: 200px; */
   border-bottom: 1px solid var(--color-main);
 }
 .reservation-main > .number > div {
   width: 50px;
 }
-.reservation-main button {
+.reservation-main input[type='button'] {
   font-size: 1.125rem;
   background-color: var(--color-main);
   color: white;
@@ -294,10 +291,6 @@
   font-size: 1.75rem;
   margin-bottom: 10px;
 }
-.promotion-header p,
-.event-header p {
-
-}
 /*items*/
 .promotion-items,
 .event-items {
@@ -309,6 +302,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.425);
 }
 .promotion-item {
   margin-right: 30px;
@@ -322,7 +316,6 @@
 }
 .promotion-img {
   position: relative;
-
 }
 .promotion-img span {
   display: inline-block;
@@ -337,9 +330,6 @@
   padding-top: 12px;
   color: white;
   font-size: 0.9rem;
-}
-.event-img {
- 
 }
 .promotion-img img,
 .event-img img {
@@ -358,6 +348,20 @@
 .event-desc {
   color: white;
 }
+.event-desc::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background-color: var(--color-main);
+}
+.event-item:nth-child(2) .event-desc::before {
+  background-color: var(--color-khaki);
+}
+
 .event-item:nth-child(1) .event-desc,
 .event-item:nth-child(3) .event-desc {
   background-color: var(--color-main);
@@ -365,6 +369,7 @@
 .event-item:nth-child(2) .event-desc {
   background-color: var(--color-khaki);
 }
+
 .promotion-desc h3,
 .event-desc h3 {
   font-size: 1.45rem;
@@ -415,7 +420,6 @@
   font-weight: bold;
 }
 
-
 /* 05 hotel-notice */
 #hotel-notice {
   padding: 100px 0;
@@ -455,6 +459,7 @@
 .facilities-items hr, .infra-items hr {
   width: 100%;
   height: 1px;
+  border: none;
   background-color: var(--color-khaki);
   margin: 30px 0;
 }
@@ -464,9 +469,6 @@
 .infra-item {
   flex-direction: column;
   margin-bottom: 55px;
-}
-.facilities-img, .infra-img {
-
 }
 .facilities-img {
   margin-right: 25px;
@@ -497,6 +499,7 @@
   font-weight: bold;
   color: var(--color-khaki);
 }
+
 /* 06 Wedding */
 #wedding {
   width: 100%;
@@ -514,9 +517,6 @@
   flex: 1;
   background-color: var(--color-sub);
   padding: 80px 70px;
-}
-.wedding-header {
-
 }
 .wedding-header em {
   display: inline-block;
@@ -561,6 +561,7 @@
   height: 1px;
   background-color: var(--color-khaki);
   margin: 10px 0;
+  border: none;
 }
 .wedding-desc > div span:nth-child(1) {
   font-weight: bold;
@@ -614,3 +615,23 @@
   color: var(--color-khaki);
 }
 
+/*animation*/
+@keyframes welcome {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes myreservation {
+  0%, 100% {
+    background-color: var(--color-khaki)
+  }
+  50% {
+    background-color: var(--color-main)
+  }
+}

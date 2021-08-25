@@ -10,18 +10,12 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.footer-info {
-
-}
 .footer-info .logo {
   width: 155px;
   margin-bottom: 20px;
 }
 .footer-info .logo img {
   width: 100%;
-}
-.footer-info .footer-info-item {
-
 }
 .footer-info .footer-info-item a {
   color: white;
@@ -37,15 +31,6 @@ footer {
   background-color: white;
   top: 5px;
   right: -10px;
-
-}
-.footer-info p {
-}
-.footer-sns {
-
-}
-.footer-sns a {
-
 }
 .footer-sns a .fab {
   display: inline-block;
