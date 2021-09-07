@@ -446,6 +446,9 @@
   font-family: 'STIX Two Text', serif;
   margin-right: 10px;
 }
+.facilities-header p, .infra-header p {
+  margin-top: 7px;
+}
 .infra-items {
   display: flex;
   flex-direction: column;
